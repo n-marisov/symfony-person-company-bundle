@@ -9,6 +9,11 @@
             <generator/>
         </id>
 
+        <!-- Ссылка на объект пользователя -->
+        <one-to-one field="user" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\User">
+            <join-column name="user_id" />
+        </one-to-one>
+
         <!-- Название организации-->
         <field name="legalForm" column="legal_form" />
         <field name="name" column="legal_name" />
