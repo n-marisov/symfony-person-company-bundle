@@ -14,12 +14,12 @@
         <field name="name" column="legal_name" />
 
         <!-- Данные организации -->
-        <field name="inn" column="legal_name" />
-        <field name="kpp" column="legal_name" />
-        <field name="ogrn" column="legal_name" />
+        <field name="inn" column="inn" />
+        <field name="kpp" column="kpp" />
+        <field name="ogrn" column="ogrn" />
 
         <!-- Юридический адрес организации-->
-        <field name="address" column="legal_name" />
+        <field name="address" column="address" />
 
         <!-- Генеральный директор -->
         <one-to-one field="management" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\Person">
