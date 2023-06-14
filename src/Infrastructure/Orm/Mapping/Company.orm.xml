@@ -32,7 +32,7 @@
         </one-to-one>
 
         <!-- Доверенные пользователи организации (таблица объединения) -->
-        <many-to-many field="trustedPersons" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\User">
+        <many-to-many field="trustedPersons" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\Account">
             <join-table name="company_trusted_persons">
                 <join-columns>
                     <join-column name="user_id" />
