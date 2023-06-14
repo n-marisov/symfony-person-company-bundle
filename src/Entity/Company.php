@@ -16,6 +16,11 @@ class Company
     private ?int $id;
 
     /**
+     * Аккаунт организации
+     * @var Account|null
+     */
+    private ?Account $account = null;
+    /**
      * Правовая форма
      * @var string
      */
@@ -60,7 +65,7 @@ class Company
     /**
      * Список пользователей которые од
      * своего имени могут заходить на аккаунт компании.
-     * @var Collection<User>
+     * @var Collection<Account>
      */
     private Collection $trustedPersons;
 }

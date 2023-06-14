@@ -23,8 +23,8 @@
         <field name="gender" />
 
         <!-- Ссылка на объект пользователя-->
-        <one-to-one field="user" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\User">
-            <join-column name="user_id" />
+        <one-to-one field="account" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\Account">
+            <join-column name="account_id" />
         </one-to-one>
 
     </entity>

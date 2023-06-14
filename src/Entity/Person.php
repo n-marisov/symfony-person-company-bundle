@@ -9,7 +9,11 @@ class Person
 {
     private ?int $id = null;
 
-    private ?User $user = null;
+    /***
+     * Аккаунт пользователя
+     * @var Account|null
+     */
+    private ?Account $account = null;
 
     /**
      * Номер телефона

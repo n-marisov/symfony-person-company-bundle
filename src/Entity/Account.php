@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping\Id;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-class User implements UserInterface,PasswordAuthenticatedUserInterface
+class Account implements UserInterface,PasswordAuthenticatedUserInterface
 {
     private ?int $id = null;
 
