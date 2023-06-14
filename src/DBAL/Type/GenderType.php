@@ -9,8 +9,6 @@ use Maris\SymfonyBundle\PersonBundle\Gender;
 
 class GenderType extends Type
 {
-
-    const TYPE_NAME = "gender";
     /**
      * @inheritDoc
      */
@@ -29,7 +27,7 @@ class GenderType extends Type
      */
     public function getName():string
     {
-        return self::TYPE_NAME;
+        return "gender";
     }
     public function canRequireSQLConversion():bool
     {
