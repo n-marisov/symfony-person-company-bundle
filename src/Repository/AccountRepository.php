@@ -1,9 +1,10 @@
 <?php
 
-namespace Maris\SymfonyBundle\PersonBundle\Entity;
+namespace Maris\SymfonyBundle\PersonBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Maris\SymfonyBundle\PersonBundle\Entity\Account;
 
 /**
  * @extends ServiceEntityRepository<Account>
