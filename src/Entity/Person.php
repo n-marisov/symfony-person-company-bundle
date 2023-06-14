@@ -50,5 +50,5 @@ class Person
      * Пол true -> man false -> girl
      * @var Gender
      */
-    private Gender $gender;
+    private Gender $gender = Gender::UNKNOWN;
 }
