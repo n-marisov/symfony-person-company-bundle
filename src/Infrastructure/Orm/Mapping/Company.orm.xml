@@ -3,8 +3,13 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Company" table="business">
-
+    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Company" table="business" repository-class="Maris\SymfonyBundle\PersonBundle\Repository\CompanyRepository">
+        
+        <options>
+            <option name="comment">Сущность организации</option>
+            <option name="charset">utf8mb4</option>
+        </options>
+        
         <id name="id" type="integer" column="id">
             <generator/>
         </id>

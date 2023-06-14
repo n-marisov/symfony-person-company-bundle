@@ -2,7 +2,7 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Person" table="persons">
+    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Person" table="persons" repository-class="Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository">
 
         <id name="id" type="integer" column="id">
             <generator/>
