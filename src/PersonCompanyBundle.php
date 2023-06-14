@@ -2,7 +2,9 @@
 
 namespace Maris\SymfonyBundle\PersonBundle;
 
-class PersonCompanyBundle extends \Symfony\Component\HttpKernel\Bundle\AbstractBundle
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
+
+class PersonCompanyBundle extends AbstractBundle
 {
 
 }
