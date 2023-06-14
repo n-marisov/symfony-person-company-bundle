@@ -20,7 +20,7 @@
         <field name="birthdate" type="date_immutable"/>
 
         <!-- Пол -->
-        <field name="gender" />
+        <field name="gender" type="gender" />
 
         <!-- Ссылка на объект пользователя-->
         <one-to-one field="account" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\Account">

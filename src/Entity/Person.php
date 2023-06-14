@@ -4,6 +4,7 @@ namespace Maris\SymfonyBundle\PersonBundle\Entity;
 
 use DateTimeImmutable;
 use libphonenumber\PhoneNumber;
+use Maris\SymfonyBundle\PersonBundle\Gender;
 
 class Person
 {
@@ -47,7 +48,7 @@ class Person
 
     /**
      * Пол true -> man false -> girl
-     * @var string
+     * @var Gender
      */
-    private string $gender;
+    private Gender $gender;
 }
