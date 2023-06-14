@@ -1,0 +1,43 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Company" table="business">
+
+        <id name="id" type="integer" column="id">
+            <generator/>
+        </id>
+
+        <!-- Название организации-->
+        <field name="legalForm" column="legal_form" />
+        <field name="name" column="legal_name" />
+
+        <!-- Данные организации -->
+        <field name="inn" column="legal_name" />
+        <field name="kpp" column="legal_name" />
+        <field name="ogrn" column="legal_name" />
+
+        <!-- Юридический адрес организации-->
+        <field name="address" column="legal_name" />
+
+        <!-- Генеральный директор -->
+        <one-to-one field="management" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\Person">
+            <join-column name="management_id" nullable="false"/>
+        </one-to-one>
+
+        <!-- Доверенные пользователи организации (таблица объединения) -->
+        <many-to-many field="trustedPersons" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\User">
+            <join-table name="company_trusted_persons">
+                <join-columns>
+                    <join-column name="user_id" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="company_id" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+
+    </entity>
+
+</doctrine-mapping>

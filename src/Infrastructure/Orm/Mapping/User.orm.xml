@@ -1,0 +1,19 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\User" table="users">
+
+        <id name="id" type="integer" column="id">
+            <generator />
+        </id>
+
+        <!-- Роли пользователя для компании ROLE_COMPANY для персоны ROLE_USER -->
+        <field name="roles" type="json" />
+
+        <!-- Пароль -->
+        <field name="password" />
+
+    </entity>
+
+</doctrine-mapping>

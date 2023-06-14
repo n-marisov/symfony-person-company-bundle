@@ -1,0 +1,32 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Maris\SymfonyBundle\PersonBundle\Entity\Person" table="persons">
+
+        <id name="id" type="integer" column="id">
+            <generator/>
+        </id>
+
+        <!-- Номер телефона-->
+        <field name="phone" type="phone_number"/>
+
+        <!-- ФИО -->
+        <field name="surname"/>
+        <field name="lastname"/>
+        <field name="patronymic"/>
+
+        <!-- Дата рождения -->
+        <field name="birthdate" type="date_immutable"/>
+
+        <!-- Пол -->
+        <field name="gender" />
+
+        <!-- Ссылка на объект пользователя-->
+        <one-to-one field="user" target-entity="Maris\SymfonyBundle\PersonBundle\Entity\User">
+            <join-column name="user_id" />
+        </one-to-one>
+
+    </entity>
+
+</doctrine-mapping>
