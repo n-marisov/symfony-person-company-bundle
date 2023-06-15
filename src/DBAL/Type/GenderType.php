@@ -31,13 +31,13 @@ class GenderType extends Type
     }
     public function canRequireSQLConversion():bool
     {
-        return true;
+        return false;
     }
 
     /**
      * @throws Exception
      */
-    public function convertToDatabaseValue($value, AbstractPlatform $platform ):string
+    public function convertToDatabaseValue( $value, AbstractPlatform $platform ):string
     {
         dump($value);
         if(!is_a($value,Gender::class))
