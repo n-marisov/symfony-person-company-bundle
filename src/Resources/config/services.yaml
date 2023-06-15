@@ -1,4 +1,12 @@
 services:
 
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
   Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
-    alias: 'person.repository'
+    resource: '../src/'
+    exclude:
+      - '../src/DependencyInjection/'
+      - '../src/Entity/'
+      - '../src/ORM/'
