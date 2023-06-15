@@ -1,3 +1,7 @@
 services:
 
-   Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
+   App\:
+      resource: '../src/'
+      exclude: '../src/{DependencyInjection,Entity}'
+
+   #Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
