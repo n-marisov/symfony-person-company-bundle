@@ -4,7 +4,6 @@ namespace Maris\SymfonyBundle\PersonBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Maris\SymfonyBundle\PersonBundle\Entity\Company;
 use Maris\SymfonyBundle\PersonBundle\Entity\Person;
 
 /**
@@ -22,7 +21,7 @@ class PersonRepository extends ServiceEntityRepository
         parent::__construct($registry, Person::class);
     }
 
-    public function save(Company $entity, bool $flush = false): void
+    public function save(Person $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -31,7 +30,7 @@ class PersonRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Company $entity, bool $flush = false): void
+    public function remove(Person $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
