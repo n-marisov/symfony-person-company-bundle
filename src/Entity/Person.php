@@ -51,4 +51,141 @@ class Person
      * @var Gender
      */
     private Gender $gender = Gender::UNKNOWN;
+
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return Account|null
+     */
+    public function getAccount(): ?Account
+    {
+        return $this->account;
+    }
+
+    /**
+     * @param Account|null $account
+     * @return $this
+     */
+    public function setAccount(?Account $account): self
+    {
+        $this->account = $account;
+        return $this;
+    }
+
+    /**
+     * @return PhoneNumber
+     */
+    public function getPhone(): PhoneNumber
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param PhoneNumber $phone
+     * @return $this
+     */
+    public function setPhone(PhoneNumber $phone): self
+    {
+        $this->phone = $phone;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSurname(): string
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param string $surname
+     * @return $this
+     */
+    public function setSurname(string $surname): self
+    {
+        $this->surname = $surname;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastname(): string
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * @param string $lastname
+     * @return $this
+     */
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPatronymic(): string
+    {
+        return $this->patronymic;
+    }
+
+    /**
+     * @param string $patronymic
+     * @return $this
+     */
+    public function setPatronymic(string $patronymic): self
+    {
+        $this->patronymic = $patronymic;
+        return $this;
+    }
+
+    /**
+     * @return DateTimeImmutable|null
+     */
+    public function getBirthdate(): ?DateTimeImmutable
+    {
+        return $this->birthdate;
+    }
+
+    /**
+     * @param DateTimeImmutable|null $birthdate
+     * @return $this
+     */
+    public function setBirthdate(?DateTimeImmutable $birthdate): self
+    {
+        $this->birthdate = $birthdate;
+        return $this;
+    }
+
+    /**
+     * @return Gender
+     */
+    public function getGender(): Gender
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param Gender $gender
+     * @return $this
+     */
+    public function setGender(Gender $gender): self
+    {
+        $this->gender = $gender;
+        return $this;
+    }
+
+
+
 }

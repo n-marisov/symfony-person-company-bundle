@@ -39,4 +39,34 @@ class Account implements UserInterface,PasswordAuthenticatedUserInterface
     {
         return "";
     }
+
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param array $roles
+     * @return $this
+     */
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
+    /**
+     * @param string|null $password
+     * @return $this
+     */
+    public function setPassword(?string $password): self
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+
 }
