@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class RegistrationFormType extends AbstractType
+class RegistrationPersonFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -22,33 +22,6 @@ class RegistrationFormType extends AbstractType
         $terms = "#";
         $builder
             ->add('person',PersonType::class)
-            /*->add('phone', PhoneNumberType::class,[
-                "default_region" => "RU",
-                "label"=>"Номер телефон",
-                "attr" => [
-                    "id"=>'phoneInput',
-                    "placeholder" => "Номер телефон",
-                    "autocomplete" => "off"
-                ]
-            ])
-            ->add("firstName",HiddenType::class,[
-                "attr" => [
-                    "id" => "firstNameInput"
-                ]
-            ])
-            ->add("lastName",HiddenType::class,[
-            ])
-            ->add("patronymic",HiddenType::class,[
-                "label"=>"Номер телефон",
-                "row_attr" => [
-                    "id" => "patronymicInput"
-                ]
-            ])
-            ->add("gender",HiddenType::class,[
-                "attr" => [
-                    "id" => "genderInput"
-                ]
-            ])*/
             ->add('agreeTerms', CheckboxType::class, [
                 "label" => "Я даю согласие на обработку моих персональных данных и согласен с <a href=\"{$terms}\">условиями предоставления услуг</a>",
                 "label_html"=>true,
@@ -61,8 +34,6 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('plainPassword', PasswordType::class, [
                 "label" => "Пароль",
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
                 'mapped' => false,
                 'attr' => [
                     "id"=>"passwordInput",
