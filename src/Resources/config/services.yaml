@@ -4,9 +4,5 @@ services:
     autowire: true
     autoconfigure: true
 
-  Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
-    resource: '../src/'
-    exclude:
-      - '../src/DependencyInjection/'
-      - '../src/Entity/'
-      - '../src/ORM/'
+  Maris\SymfonyBundle\PersonBundle\Repository\:
+    resource: '../Repository/'
