@@ -1,4 +1,3 @@
 services:
 
-  Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository\:
-    public: true
+   Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
