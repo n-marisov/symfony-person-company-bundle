@@ -1,7 +1,7 @@
 services:
 
-   App\:
+   Maris\SymfonyBundle\PersonBundle\:
       resource: '../../'
-      exclude: '../../{DBAL,DependencyInjection,Entity,Form,ORM,Resources,Gender.php}'
+      exclude: '../../{DBAL,DependencyInjection,Entity,Form,ORM,Resources,Gender.php,PersonCompanyBundle.php}'
 
    #Maris\SymfonyBundle\PersonBundle\Repository\PersonRepository:
