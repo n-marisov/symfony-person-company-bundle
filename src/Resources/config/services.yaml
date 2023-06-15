@@ -6,4 +6,4 @@ services:
 
   Maris\SymfonyBundle\PersonBundle\:
     resource:
-      - 'src/Repositories/'
+      - 'src/Repository/'
