@@ -10,7 +10,8 @@ class PersonCompanyBundle extends AbstractBundle
 {
     public function getContainerExtension(): ?ExtensionInterface
     {
-        return new PersonCompanyExtension();
+        dd(new PersonCompanyExtension());
+        #return new PersonCompanyExtension();
     }
 
 }
