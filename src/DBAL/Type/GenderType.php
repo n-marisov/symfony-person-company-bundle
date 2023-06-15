@@ -39,6 +39,7 @@ class GenderType extends Type
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform ):string
     {
+        dump($value);
         if(!is_a($value,Gender::class))
             throw new Exception("Значение не является объектом ".Gender::class);
         return $value->value;

@@ -180,7 +180,7 @@ class Person
      * @param Gender $gender
      * @return $this
      */
-    public function setGender(Gender $gender): self
+    public function setGender( Gender $gender ): self
     {
         $this->gender = $gender;
         return $this;
