@@ -16,8 +16,8 @@ class PersonCompanyExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        dd($configs);
-        #$loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__).'/Resources/config'));
-        #$loader->load('services.yaml');
+        $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__).'/Resources/config'));
+        $loader->load('services.yaml');
+        dd($loader);
     }
 }
