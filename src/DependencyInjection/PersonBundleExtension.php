@@ -9,13 +9,11 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class PersonBundleExtension extends Extension
 {
-
     /**
      * @inheritDoc
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        dump(dirname(__DIR__).'/Resources/config');
         $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__).'/Resources/config'));
         $loader->load('services.yaml');
     }

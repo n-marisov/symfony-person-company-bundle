@@ -5,4 +5,4 @@ services:
     autoconfigure: true
 
   Maris\SymfonyBundle\PersonBundle\Repository\:
-    resource: '../../Repository/*'
+    resource: '%kernel.project_dir%/src/Repository/*'
